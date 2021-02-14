@@ -14,6 +14,10 @@
       git:
        repo: https://github.com/henre1989/Dockerfile_java_app.git
        dest: /home/server1/Dockerfile_java_app
+    - name: Ensure python-docker is install
+      apt:
+       name: python-docker
+       status: present
     - name: Ensure build docker image und push to dockerhub
       docker_image:
        build:
