@@ -3,7 +3,7 @@
   hosts: build
   become: yes
   vars:
-   pass: !vault |
+      pass_dockerhub: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           39353830306536366432653162306236366362656530376436346632623363396530663038366336
           6633623434383566346464633136333831643463306439310a353335653234363133326130363734
@@ -38,14 +38,13 @@
     - name: Log into DockerHub
       docker_login:
        username: henre1989
-       password: "{{ pass }}"
+       password: "{{ pass_dockerhub }}"
        state: present
     - name: Ensure build docker image und push to dockerhub
       docker_image:
        build:
         path: /home/server1//Dockerfile_java_app
        name: henre1989/java_app
-       #name: java_app
        tag: v1
        push: yes
        source: build
