@@ -13,7 +13,7 @@
     - name: Ensure Dockerfile is clone
       git:
        repo: https://github.com/henre1989/Dockerfile_java_app.git
-       dist: /home/server1/
+       dest: /home/server1/
     - name: Ensure build docker image und push to dockerhub
       docker_image:
        build:
