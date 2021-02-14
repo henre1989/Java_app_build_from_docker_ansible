@@ -30,8 +30,8 @@
       docker_image:
        build:
         path: /home/server1//Dockerfile_java_app
-       #name: henre1989/java_app
-       name: java_app
+       name: henre1989/java_app
+       #name: java_app
        tag: v1
-       #push: yes
+       push: yes
        source: build
