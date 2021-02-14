@@ -38,7 +38,7 @@
     - name: Log into DockerHub
       docker_login:
        username: henre1989
-       password: {{ pass }}
+       password: "{{ pass }}"
        state: present
     - name: Ensure build docker image und push to dockerhub
       docker_image:
