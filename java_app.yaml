@@ -14,9 +14,9 @@
       git:
        repo: https://github.com/henre1989/Dockerfile_java_app.git
        dest: /home/server1/Dockerfile_java_app
-    - name: Ensure python3-pip is install
+    - name: Ensure python-pip is install
       apt:
-       name: python3-pip
+       name: python-pip
        state: present
     - name: Ensure python-docker is install
       pip:
