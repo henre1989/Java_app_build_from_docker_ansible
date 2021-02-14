@@ -5,7 +5,7 @@
   tasks:
     - name: update repository
       apt:
-       update_cache: yesupdate
+       update_cache: yes
     - name: Ensure docker install
       apt:
        name: docker.io
