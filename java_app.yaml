@@ -76,5 +76,6 @@
       docker_container:
        name: java_app
        image: henre1989/java_app:v1
+       published_ports: 8080:8080
        state: started
 
