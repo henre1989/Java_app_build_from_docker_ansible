@@ -14,13 +14,9 @@
       git:
        repo: https://github.com/henre1989/Dockerfile_java_app.git
        dest: /home/server1/Dockerfile_java_app
-    - name: Ensure python-pip is install
+    - name: Ensure python3-pip is install
       apt:
-       name: python-pip
-       state: present
-    - name: Ensure python-docker is install
-      pip:
-       name: python-docker
+       name: python3-pip
        state: present
     - name: Ensure Docker SDK for Python is install
       pip:
