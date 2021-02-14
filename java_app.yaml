@@ -8,13 +8,13 @@
        update_cache: yesupdate
     - name: Ensure docker install
       apt:
-      name: docker.io
-      state: present
+       name: docker.io
+       state: present
     - name: Ensure Dockerfile is clone
       git:
        repo: https://github.com/henre1989/Dockerfile_java_app.git
        dist: /home/server1/
-    - name: Ensure build docker image
+    - name: Ensure build docker image und push to dockerhub
       docker_image:
        build:
         path: /home/server1//Dockerfile_java_app
@@ -22,4 +22,3 @@
        tag: v1
        push: yes
        source: build
-
